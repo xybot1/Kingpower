@@ -22,14 +22,14 @@ local function run(msg,matches)
         end
        end
     end
-    if matches[1] == "tosticker" then
+    if matches[1] == "عکس به استیکر" then
      redis:set("photo:sticker", "waiting")
-     return 'Please send your photo now'
+     return 'لطفا الان عکس را بفرستید'
     end
 end
 return {
   patterns = {
- "^[!/](tosticker)$",
+ "^(عکس به استیکر)$",
  "%[(photo)%]",
   },
   run = run,
