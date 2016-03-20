@@ -1,14 +1,14 @@
 do
 local function run(msg, matches)
-local sudo = 122774063 
-    if matches[1] == "insudo" and is_owner(msg) then
+local sudo = 144616352
+    if matches[1] == "دعوت سودو" and is_owner(msg) then
        chat_add_user("chat#id"..msg.to.id, 'user#id'..sudo, ok_cb, false)
     end
 end
  
 return {
   patterns = {
-    "^([Ii]nsudo)$",
+    "^(دعوت سودو)$",
     "^!!tgservice (.+)$",
   },
   run = run
